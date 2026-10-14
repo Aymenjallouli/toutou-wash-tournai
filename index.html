@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Toutou Wash, toiletteur canin à Tournai (Warchin)</title>
+<meta name="description" content="Toutou Wash, toilettage canin au Vieux Chemin d'Ath 36 à Warchin, Tournai. Noté 4,9 sur 5 sur 45 avis Google. Rendez-vous au 0493 98 76 03.">
+<meta property="og:title" content="Toutou Wash, toiletteur canin à Tournai">
+<meta property="og:description" content="Toilettage canin à Warchin, Tournai. 4,9 sur 5 sur 45 avis Google : patience, gentillesse, travail impeccable.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_BE">
+<meta name="theme-color" content="#B4235F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23B4235F'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-style='italic' text-anchor='middle' fill='%23FFF7F2'%3ETw%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Hanken+Grotesk:wght@400;600&display=swap">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "additionalType": "https://www.wikidata.org/wiki/Q1365398",
+  "name": "Toutou Wash",
+  "description": "Toiletteur canin à Warchin, Tournai.",
+  "telephone": "+32493987603",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Vieux Chemin d'Ath 36",
+    "postalCode": "7548",
+    "addressLocality": "Tournai",
+    "addressCountry": "BE"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 50.6090856, "longitude": 3.4214669 },
+  "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJIbjAfDjgwkcRyeJlLgNx2xc",
+  "sameAs": ["https://www.facebook.com/people/Toutouwash/100054421542592/"]
+}
+</script>
+<style>
+/* ==========================================================================
+   DESIGN DECISIONS — Toutou Wash, Warchin (Tournai)
+   Direction : WARM ARTISAN. A one-chair dog-grooming salon in a house on the
+     Vieux Chemin d'Ath: grey tiles, a speckled grooming table, a wall that
+     reads "un peu… à la folie", and a groomer in a magenta smock.
+   Palette (from the photos) : warm paper off-white (--bg) and a greige surface
+     like the salon's tiles; charcoal ink from the tiles and the leather armchair;
+     ONE strong move = the magenta of her smock (--brand). Copper from the
+     Australian shepherd's eyebrows (--accent) for stars only.
+   Type : Fraunces (high-opsz display, roman + italic, weight 400 only — soft,
+     friendly, editorial) + Hanken Grotesk 400/600 for body and labels.
+   Hero : split editorial. A huge serif headline lifted from a review ("patiente
+     avec les animaux et leurs maîtres") + the blue-eyed Aussie inside an arch
+     window, with a rotating "4,9 · 45 avis" stamp overlapping it.
+   Rhythm : sticky-side proof → photo with overlapping panel → horizontal
+     "registre" rail of named dogs (tight crops, the owner's stickers cropped out,
+     names set in our type) → dark statement band (the wall's daisy phrase,
+     SIGNATURE MOMENT) → map split → big phone number close.
+   Shape : one soft radius (14px) + the arch. No drop shadows; depth by overlap.
+   ========================================================================== */
+:root{
+  --bg:#F6F1EA; --surface:#ECE3D8; --ink:#231F1D; --ink-soft:#5C544E;
+  --brand:#B4235F; --brand-ink:#FFF7F2; --brand-light:#F07AAE; --accent:#B8642A; --line:#D8CCBF;
+
+  --step--1:clamp(.84rem,.8rem + .15vw,.92rem);
+  --step-0:clamp(1.0625rem,1rem + .3vw,1.1875rem);
+  --step-1:clamp(1.25rem,1.12rem + .55vw,1.55rem);
+  --step-2:clamp(1.5rem,1.25rem + 1.1vw,2.1rem);
+  --step-3:clamp(1.85rem,1.4rem + 2.1vw,3rem);
+  --step-4:clamp(2.4rem,1.7rem + 3.4vw,4.4rem);
+  --step-5:clamp(2.9rem,1.6rem + 6vw,6.6rem);
+  --step-6:clamp(3rem,1.1rem + 8.6vw,8.5rem);
+
+  --space-1:8px; --space-2:16px; --space-3:24px; --space-4:32px; --space-5:40px;
+  --space-6:48px; --space-7:64px; --space-8:80px; --space-9:112px; --space-10:160px;
+  --section:clamp(64px,12vw,160px);
+  --gutter:clamp(20px,5vw,48px);
+  --max:1280px;
+  --r:14px;
+
+  --ease-out:cubic-bezier(.16,1,.3,1); --ease-in-out:cubic-bezier(.65,0,.35,1);
+  --dur-1:180ms; --dur-2:400ms; --dur-3:800ms;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:var(--step-0);line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.22;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .14 0 0 0 0 .12 0 0 0 0 .11 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+p{text-wrap:pretty;margin:0}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;font-optical-sizing:auto}
+em{font-style:italic}
+::selection{background:var(--brand);color:var(--brand-ink)}
+:focus-visible{outline:2px solid var(--brand);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:var(--space-2);top:-60px;z-index:200;background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:var(--r);text-decoration:none}
+.skip:focus{top:var(--space-2)}
+.wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--gutter)}
+.eyebrow{font-size:var(--step--1);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);display:flex;gap:.8em;align-items:center}
+.eyebrow b{color:var(--brand);font-weight:600}
+.eyebrow::after{content:"";height:1px;width:40px;background:currentColor;opacity:.5}
+.icon{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* Links & buttons */
+.link{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.25em;text-decoration-color:color-mix(in srgb,currentColor 40%,transparent);transition:text-decoration-color var(--dur-1)}
+.btn{--h:52px;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:var(--h);padding:0 24px;border-radius:999px;
+  font:600 1rem/1 var(--sans);text-decoration:none;border:1px solid transparent;position:relative;overflow:hidden;isolation:isolate;
+  transition:transform var(--dur-1) var(--ease-out),background-color var(--dur-2),color var(--dur-2),border-color var(--dur-2)}
+.btn:active{transform:scale(.97)}
+.btn--brand{background:var(--brand);color:var(--brand-ink)}
+.btn--ghost{border-color:var(--ink);color:var(--ink)}
+.btn--light{border-color:color-mix(in srgb,var(--bg) 50%,transparent);color:var(--bg)}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--ink);transform:translateY(101%);transition:transform var(--dur-2) var(--ease-out)}
+.btn--ghost::before{background:var(--ink)}
+.btn--light::before{background:var(--bg)}
+@media (hover:hover){
+  .btn:hover::before{transform:none}
+  .btn--ghost:hover{color:var(--bg)}
+  .btn--light:hover{color:var(--ink)}
+  .link:hover{text-decoration-color:currentColor}
+}
+
+/* Header */
+.hdr{position:fixed;inset:0 0 auto;z-index:100;transition:background-color var(--dur-2),box-shadow var(--dur-2)}
+.hdr__in{display:flex;align-items:center;justify-content:space-between;height:68px;transition:height var(--dur-2) var(--ease-out)}
+.hdr.is-scrolled{background:color-mix(in srgb,var(--bg) 92%,transparent);box-shadow:0 1px 0 var(--line);-webkit-backdrop-filter:saturate(1.2) blur(8px);backdrop-filter:saturate(1.2) blur(8px)}
+.hdr.is-scrolled .hdr__in{height:58px}
+.mark{display:inline-flex;align-items:center;gap:10px;text-decoration:none;min-height:50px;transform-origin:left center;transition:transform var(--dur-2) var(--ease-out)}
+.hdr.is-scrolled .mark{transform:scale(.9)}
+.mark__mono{width:36px;height:36px;border-radius:50%;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font:italic 400 17px/1 var(--display)}
+.mark__word{font:400 1.4rem/1 var(--display);letter-spacing:-.01em}
+.mark__word em{color:var(--brand)}
+.nav{display:none}
+.menu-btn{display:inline-flex;align-items:center;gap:10px;min-height:44px;min-width:44px;padding:0 4px 0 14px;border:0;background:none;color:var(--ink);font:600 .95rem var(--sans);cursor:pointer}
+.menu-btn__bars{width:22px;height:12px;position:relative}
+.menu-btn__bars::before,.menu-btn__bars::after{content:"";position:absolute;left:0;right:0;height:1.6px;background:currentColor;transition:transform var(--dur-2) var(--ease-out),top var(--dur-2) var(--ease-out)}
+.menu-btn__bars::before{top:0}.menu-btn__bars::after{top:10px}
+.menu-btn[aria-expanded="true"] .menu-btn__bars::before{top:5px;transform:rotate(45deg)}
+.menu-btn[aria-expanded="true"] .menu-btn__bars::after{top:5px;transform:rotate(-45deg)}
+.menu{position:fixed;inset:0;z-index:99;background:var(--bg);padding:110px var(--gutter) calc(110px + env(safe-area-inset-bottom));display:flex;flex-direction:column;justify-content:space-between;
+  visibility:hidden;opacity:0;transition:opacity var(--dur-2) var(--ease-out),visibility 0s var(--dur-2)}
+.menu.is-open{visibility:visible;opacity:1;transition:opacity var(--dur-2) var(--ease-out)}
+.menu ol{list-style:none;margin:0;padding:0;counter-reset:m}
+.menu li{counter-increment:m;border-bottom:1px solid var(--line);overflow:hidden}
+.menu li a{display:flex;align-items:baseline;gap:16px;padding:14px 0;font:400 var(--step-3)/1.1 var(--display);text-decoration:none;transform:translateY(110%);transition:transform var(--dur-3) var(--ease-out)}
+.menu li a::before{content:"0" counter(m);font:600 var(--step--1) var(--sans);color:var(--brand);letter-spacing:.1em}
+.menu.is-open li a{transform:none;transition-delay:calc(var(--i) * 60ms + 80ms)}
+.menu__foot{font-size:var(--step--1);color:var(--ink-soft)}
+body.is-locked{overflow:hidden}
+
+/* Hero */
+.hero{padding-top:calc(68px + var(--space-4));padding-bottom:var(--section);position:relative}
+.hero__grid{row-gap:var(--space-4);align-items:end}
+.hero__text,.hero__media,.hero__aside{grid-column:1/-1}
+.hero__title{font-size:clamp(2.85rem,.9rem + 8.6vw,7rem);line-height:.96;letter-spacing:-.035em;margin-top:var(--space-3);font-variation-settings:"opsz" 144}
+.hero__title .ln{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.hero__title .ln>span{display:inline-block}
+.hero__title em{color:var(--brand)}
+.hero__media{position:relative;margin-top:var(--space-1)}
+.arch{position:relative;overflow:hidden;border-radius:999px 999px var(--r) var(--r);aspect-ratio:1/1.02;background:var(--surface)}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:52% 34%}
+.stamp{position:absolute;left:-6px;top:-18px;width:118px;height:118px;border-radius:50%;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;text-decoration:none;z-index:2}
+.stamp svg.ring{position:absolute;inset:0;width:100%;height:100%;animation:spin 38s linear infinite}
+.stamp svg.ring text{font:600 9.4px var(--sans);letter-spacing:.2em;text-transform:uppercase;fill:currentColor}
+.stamp__c{text-align:center;line-height:1}
+.stamp__c strong{display:block;font:400 2.1rem/1 var(--display);letter-spacing:-.03em}
+.stamp__c .stars{justify-content:center;margin-top:4px;color:var(--brand-ink)}
+@keyframes spin{to{transform:rotate(1turn)}}
+.hero__lede{font-size:var(--step-1);line-height:1.5;color:var(--ink-soft);max-width:34ch}
+.hero__lede strong{color:var(--ink);font-weight:400;font-family:var(--display);font-style:italic}
+.hero__ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:var(--space-4)}
+.hero__ctas .btn{flex:1 1 180px}
+.hero__rating{display:flex;align-items:center;gap:10px;margin-top:var(--space-3);font-size:var(--step--1);color:var(--ink-soft);min-height:44px}
+.stars{display:inline-flex;gap:2px;color:var(--accent)}
+.stars svg{width:14px;height:14px;fill:currentColor}
+
+/* Proof */
+.proof{padding-block:var(--section);border-top:1px solid var(--line)}
+.proof__side,.proof__main{grid-column:1/-1}
+.score{display:flex;align-items:flex-end;gap:var(--space-2);margin-top:var(--space-4)}
+.score__n{font:400 var(--step-6)/.8 var(--display);letter-spacing:-.05em;font-variation-settings:"opsz" 144}
+.score__meta{padding-bottom:.4em;font-size:var(--step--1);color:var(--ink-soft);line-height:1.4}
+.score__meta .stars svg{width:16px;height:16px}
+.proof h2{font-size:var(--step-3);line-height:1.08;letter-spacing:-.02em;margin-top:var(--space-5)}
+.proof h2 em{color:var(--brand)}
+.proof__more{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:var(--space-3);font-weight:600}
+.feature{margin:var(--space-7) 0 0;position:relative}
+.feature blockquote{margin:0;font:italic 400 var(--step-4)/1.08 var(--display);letter-spacing:-.025em;text-wrap:balance}
+.feature blockquote::before{content:"«";display:block;font-style:normal;color:var(--brand);font-size:1.4em;line-height:.6;margin-bottom:.15em}
+.cite{display:flex;align-items:center;gap:12px;margin-top:var(--space-3);font-size:var(--step--1);color:var(--ink-soft)}
+.cite b{color:var(--ink);font-weight:600;text-transform:capitalize}
+.quotes{display:flex;gap:var(--space-2);overflow-x:auto;scroll-snap-type:x mandatory;margin:var(--space-7) calc(var(--gutter) * -1) 0;padding:0 var(--gutter) var(--space-2);scrollbar-width:none;list-style:none;scroll-padding-inline:var(--gutter)}
+.quotes::-webkit-scrollbar{display:none}
+.quotes li{flex:0 0 82%;scroll-snap-align:start;border-top:1px solid var(--ink);padding-top:var(--space-3)}
+.quotes blockquote{margin:0;font:400 var(--step-1)/1.4 var(--display)}
+.quotes .n{font:600 var(--step--1) var(--sans);color:var(--brand);letter-spacing:.1em;display:block;margin-bottom:var(--space-2)}
+
+/* Grooming */
+.groom{position:relative;padding-bottom:var(--section)}
+.groom__photo{grid-column:1/-1;margin-inline:calc(var(--gutter) * -1);aspect-ratio:4/5;overflow:hidden;position:relative}
+.groom__photo img{width:100%;height:100%;object-fit:cover;object-position:40% 55%}
+.groom__photo figcaption{position:absolute;left:var(--gutter);top:var(--space-3);font-size:var(--step--1);color:var(--ink);background:var(--bg);padding:6px 12px;border-radius:999px}
+.groom__panel{grid-column:1/-1;background:var(--bg);margin-top:-96px;margin-left:var(--space-3);margin-right:calc(var(--gutter) * -1);padding:var(--space-5) var(--gutter) 0 var(--space-4);position:relative;border-top-left-radius:var(--r)}
+.groom h2{font-size:var(--step-4);line-height:1.02;letter-spacing:-.03em;margin-top:var(--space-3)}
+.groom__intro{margin-top:var(--space-3);color:var(--ink-soft);max-width:44ch}
+.steps{list-style:none;margin:var(--space-6) 0 0;padding:0}
+.steps li{display:grid;grid-template-columns:auto 1fr;column-gap:var(--space-3);align-items:baseline;padding:var(--space-3) 0;border-top:1px solid var(--line)}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+.steps .k{font:italic 400 var(--step-3)/1 var(--display);color:var(--brand);min-width:1.6em}
+.steps h3{font-size:var(--step-2);line-height:1.15;letter-spacing:-.01em}
+.steps p{grid-column:2;color:var(--ink-soft);margin-top:4px}
+.groom__note{margin-top:var(--space-4);display:flex;flex-wrap:wrap;gap:var(--space-2) var(--space-3);align-items:center;font-size:var(--step--1);color:var(--ink-soft)}
+
+/* Registre rail */
+.reg{background:var(--surface);padding-block:var(--section);overflow:hidden}
+.reg__head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:var(--space-3)}
+.reg h2{font-size:var(--step-5);line-height:.98;letter-spacing:-.04em;margin-top:var(--space-3);max-width:12ch}
+.reg h2 em{color:var(--brand)}
+.reg__intro{max-width:38ch;color:var(--ink-soft)}
+.rail{display:flex;gap:var(--space-2);overflow-x:auto;scroll-snap-type:x mandatory;list-style:none;margin:var(--space-7) 0 0;
+  padding:0 var(--gutter) var(--space-2);scroll-padding-inline:var(--gutter);scrollbar-width:none;overscroll-behavior-x:contain}
+.rail::-webkit-scrollbar{display:none}
+.rail li{flex:0 0 68vw;max-width:320px;scroll-snap-align:start}
+.rail li:nth-child(even){margin-top:var(--space-6)}
+.crop{aspect-ratio:3/4;overflow:hidden;border-radius:var(--r);background:var(--bg)}
+.crop img{width:100%;height:100%;object-fit:cover;transform:scale(var(--s,1));transform-origin:var(--ox,50%) var(--oy,50%);transition:transform var(--dur-3) var(--ease-out)}
+.tag{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-top:var(--space-2);border-top:1px solid var(--ink);padding-top:10px}
+.tag strong{font:italic 400 var(--step-2)/1.1 var(--display);letter-spacing:-.01em}
+.tag span{font-size:var(--step--1);color:var(--ink-soft);letter-spacing:.1em}
+.rail__ctrl{display:none;gap:8px}
+.rail__ctrl button{width:52px;height:52px;border-radius:50%;border:1px solid var(--ink);background:none;color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:background-color var(--dur-1),color var(--dur-1)}
+@media (hover:hover){
+  .rail__ctrl button:hover{background:var(--ink);color:var(--bg)}
+  .crop:hover img{transform:scale(calc(var(--s,1) * 1.03))}
+}
+
+/* Statement band — signature */
+.band{background:var(--ink);color:var(--bg);padding-block:var(--section);overflow:hidden}
+.band .eyebrow{color:color-mix(in srgb,var(--bg) 70%,transparent)}
+.band .eyebrow b{color:var(--brand-light)}
+.daisy{margin:var(--space-5) 0 0;padding:0;list-style:none;font:400 clamp(2.7rem,.6rem + 10.6vw,9.6rem)/.95 var(--display);letter-spacing:-.045em;font-variation-settings:"opsz" 144}
+.daisy li{display:block;color:color-mix(in srgb,var(--bg) 30%,var(--ink));transition:color 1200ms var(--ease-out)}
+.daisy li:nth-child(2){padding-left:8%}
+.daisy li:nth-child(3){padding-left:3%}
+.daisy li:nth-child(4){padding-left:14%;color:var(--brand-light);font-style:italic}
+.daisy li.lit{color:var(--bg)}
+.daisy li:nth-child(4).lit{color:var(--brand-light)}
+.band__foot{display:grid;gap:var(--space-3);margin-top:var(--space-7);max-width:520px;margin-left:auto;color:color-mix(in srgb,var(--bg) 78%,transparent)}
+.band__foot p{font-size:var(--step-1);line-height:1.45}
+
+/* Access */
+.access{padding-block:var(--section)}
+.access__info,.access__map{grid-column:1/-1}
+.access h2{font-size:var(--step-4);line-height:1.02;letter-spacing:-.03em;margin-top:var(--space-3)}
+.addr{font-style:normal;margin-top:var(--space-4);font-size:var(--step-1);line-height:1.45}
+.facts{list-style:none;margin:var(--space-4) 0 0;padding:0}
+.facts li{display:flex;gap:12px;align-items:flex-start;padding:var(--space-2) 0;border-top:1px solid var(--line);color:var(--ink-soft)}
+.facts li:last-child{border-bottom:1px solid var(--line)}
+.facts .icon{margin-top:3px;color:var(--brand)}
+.access__btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:var(--space-4)}
+.access__btns .btn{flex:1 1 200px}
+.access__map{margin-top:var(--space-6)}
+.map{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;background:var(--surface);border:1px solid var(--line)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.35) sepia(.12)}
+.map__fallback{position:absolute;inset:auto 12px 12px auto;z-index:1;background:var(--bg);padding:10px 16px;border-radius:999px;font-size:var(--step--1);font-weight:600;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;gap:8px}
+
+/* Contact */
+.contact{padding-bottom:var(--section)}
+.contact__inner{border-top:1px solid var(--ink);padding-top:var(--space-7)}
+.contact__text,.contact__photo{grid-column:1/-1}
+.contact h2{font-size:var(--step-3);line-height:1.08;letter-spacing:-.02em;margin-top:var(--space-3);max-width:16ch}
+.phone{display:block;margin-top:var(--space-4);font:400 clamp(2.6rem,1rem + 8vw,7.4rem)/.95 var(--display);letter-spacing:-.04em;text-decoration:none;white-space:nowrap;font-variation-settings:"opsz" 144}
+.phone span{background:linear-gradient(var(--brand),var(--brand)) 0 100%/0 2px no-repeat;transition:background-size var(--dur-3) var(--ease-out)}
+@media (hover:hover){.phone:hover span{background-size:100% 2px}}
+.contact__btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:var(--space-5)}
+.contact__btns .btn{flex:1 1 200px}
+.contact__social{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:var(--space-3);font-weight:600}
+.contact__photo{margin-top:var(--space-7)}
+.contact__photo .crop{aspect-ratio:5/4}
+.contact__photo .crop img{object-position:50% 40%}
+
+/* Footer */
+.ftr{background:var(--ink);color:color-mix(in srgb,var(--bg) 78%,transparent);padding:var(--space-8) 0 calc(var(--space-4) + 60px + env(safe-area-inset-bottom));font-size:var(--step--1)}
+.ftr .mark__word{color:var(--bg);font-size:var(--step-3)}
+.ftr__grid{display:grid;gap:var(--space-4)}
+.ftr a{color:var(--bg)}
+.ftr__bottom{margin-top:var(--space-7);padding-top:var(--space-3);border-top:1px solid color-mix(in srgb,var(--bg) 18%,transparent);display:flex;align-items:center;flex-wrap:wrap;justify-content:space-between;gap:var(--space-2)}
+.ftr p+p{margin-top:6px}
+.ftr .link{display:inline-flex;align-items:center;min-height:44px}
+
+/* Sticky action bar (mobile) */
+.bar{position:fixed;inset:auto 0 0;z-index:95;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
+  border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom);background-color:var(--bg)}
+.bar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:60px;text-decoration:none;font-size:.8rem;font-weight:600;color:var(--ink);background:var(--bg);transition:background-color var(--dur-1)}
+.bar a:first-child{background:var(--brand);color:var(--brand-ink)}
+.bar a:active{background:var(--surface)}
+.bar a:first-child:active{background:#8f1b4b}
+
+/* Reveal system (JS only) */
+.js [data-reveal]{opacity:0;transform:translateY(22px);transition:opacity var(--dur-3) var(--ease-out),transform var(--dur-3) var(--ease-out);transition-delay:calc(var(--d,0) * 80ms)}
+.js [data-reveal].in{opacity:1;transform:none}
+.js .hdr{animation:fade var(--dur-3) var(--ease-out) both}
+.js .hero__title .ln>span{animation:rise 900ms var(--ease-out) both;animation-delay:calc(var(--i) * 80ms + 150ms)}
+.js .hero .arch{animation:unclip 1100ms var(--ease-in-out) 350ms both}
+.js .hero .arch img{animation:settle 1400ms var(--ease-out) 350ms both}
+.js .stamp{animation:pop var(--dur-3) var(--ease-out) 900ms both}
+@keyframes fade{from{opacity:0}}
+@keyframes rise{from{transform:translateY(105%)}}
+@keyframes unclip{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0)}}
+@keyframes settle{from{transform:scale(1.08)}}
+@keyframes pop{from{opacity:0;transform:scale(.6) rotate(-30deg)}}
+@supports (animation-timeline: view()){
+  .hero__media .arch-par{animation:par linear both;animation-timeline:view();animation-range:exit 0% exit 100%}
+  @keyframes par{to{transform:translateY(12%) scale(1.06)}}
+}
+
+/* ---------- 640 ---------- */
+@media (min-width:640px){
+  .rail li{flex-basis:300px}
+  .quotes li{flex-basis:60%}
+  .arch{aspect-ratio:4/3.4}
+  .ftr__grid{grid-template-columns:1fr 1fr}
+}
+/* ---------- 768: desktop chrome ---------- */
+@media (min-width:768px){
+  .ftr{padding-bottom:var(--space-6)}
+  .bar{display:none}
+  .contact__photo .crop{aspect-ratio:4/5}
+}
+/* ---------- 960 ---------- */
+@media (min-width:960px){
+  .grid{grid-template-columns:repeat(12,minmax(0,1fr))}
+  .nav{display:flex;align-items:center;gap:var(--space-4)}
+  .nav a:not(.btn){font-size:.95rem;text-decoration:none;position:relative;padding:12px 0}
+  .nav a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform var(--dur-2) var(--ease-out)}
+  .nav a:not(.btn):hover::after{transform:scaleX(1);transform-origin:left}
+  .nav .btn{--h:44px;padding:0 20px}
+  .menu-btn,.menu{display:none}
+  .hero{padding-top:calc(68px + var(--space-6));padding-bottom:var(--space-9)}
+  .hero__grid{align-items:start;row-gap:var(--space-5)}
+  .hero__title{font-size:clamp(4rem,1rem + 6.4vw,6.6rem)}
+  .hero__text{grid-column:1/8;grid-row:1;padding-top:var(--space-5)}
+  .hero__media{grid-column:8/13;grid-row:1/3;margin-top:0}
+  .hero__aside{grid-column:1/7;grid-row:2}
+  .arch{aspect-ratio:auto;height:min(calc(100svh - 140px),760px);min-height:520px}
+  .groom{padding-bottom:var(--space-9)}
+  .stamp{left:-64px;top:auto;bottom:18%;width:140px;height:140px}
+  .stamp svg.ring text{font-size:9px}
+  .proof__side{grid-column:1/5;position:sticky;top:110px;align-self:start}
+  .proof__main{grid-column:6/13}
+  .feature{margin-top:0}
+  .quotes{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-5) var(--gutter);overflow:visible;margin-inline:0;padding:0}
+  .quotes li:first-child{grid-column:1/-1}
+  .quotes li:first-child blockquote{max-width:30ch}
+  .groom__photo{grid-column:1/8;grid-row:1;margin-inline:0;aspect-ratio:3/4;border-radius:var(--r)}
+  .groom__panel{grid-column:7/13;grid-row:1;align-self:center;margin:var(--space-9) 0 0;padding:var(--space-7) var(--space-6) var(--space-6);border-radius:var(--r)}
+  .rail{padding-inline:max(var(--gutter),calc((100vw - var(--max)) / 2 + var(--gutter)));scroll-padding-inline:max(var(--gutter),calc((100vw - var(--max)) / 2 + var(--gutter)))}
+  .rail li{flex-basis:290px}
+  .rail__ctrl{display:flex}
+  .access__info{grid-column:1/6;align-self:center}
+  .access__map{grid-column:7/13;margin-top:0}
+  .map{aspect-ratio:1/1.05}
+  .contact__text{grid-column:1/9}
+  .contact__photo{grid-column:9/13;margin-top:0;transform:translateY(-120px)}
+  .ftr__grid{grid-template-columns:2fr 1fr 1fr}
+}
+@media (min-width:1280px){
+  .band__foot{margin-right:8%}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .js [data-reveal]{opacity:1;transform:none}
+  .daisy li{color:var(--bg)}
+  .daisy li:nth-child(4){color:var(--brand-light)}
+}
+</style>
+<!--sf:preview--><meta name="robots" content="noindex, nofollow"><!--/sf:preview-->
+<!--sf:og--><meta property="og:image" content="https://toutou-wash-tournai.aymenjallouli.dev/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:url" content="https://toutou-wash-tournai.aymenjallouli.dev/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://toutou-wash-tournai.aymenjallouli.dev/og.jpg"><!--/sf:og-->
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="star" viewBox="0 0 20 20"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></symbol>
+</svg>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr__in">
+    <a class="mark" href="#top" aria-label="Toutou Wash, retour en haut">
+      <span class="mark__mono" aria-hidden="true">Tw</span>
+      <span class="mark__word">Toutou <em>Wash</em></span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#avis">Avis</a>
+      <a href="#toilettage">Toilettage</a>
+      <a href="#registre">Sur la table</a>
+      <a href="#acces">Accès</a>
+      <a class="btn btn--brand" href="tel:+32493987603"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3.5l1.8 4.4-2.3 1.5a11 11 0 0 0 6.1 6.1l1.5-2.3L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></svg><span>0493 98 76 03</span></a>
+    </nav>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu"><span>Menu</span><span class="menu-btn__bars" aria-hidden="true"></span></button>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-label="Menu">
+  <ol>
+    <li><a href="#avis" style="--i:0">Avis</a></li>
+    <li><a href="#toilettage" style="--i:1">Toilettage</a></li>
+    <li><a href="#registre" style="--i:2">Sur la table</a></li>
+    <li><a href="#acces" style="--i:3">Accès</a></li>
+    <li><a href="#contact" style="--i:4">Rendez-vous</a></li>
+  </ol>
+  <p class="menu__foot">Vieux Chemin d'Ath 36, 7548 Tournai<br><a class="link" href="tel:+32493987603">0493 98 76 03</a></p>
+</div>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="wrap grid hero__grid">
+      <div class="hero__text">
+        <p class="eyebrow">Toiletteur canin · Tournai</p>
+        <h1 class="hero__title">
+          <span class="ln"><span style="--i:0">Patiente avec</span></span>
+          <span class="ln"><span style="--i:1">les chiens,</span></span>
+          <span class="ln"><span style="--i:2"><em>et avec leurs</em></span></span>
+          <span class="ln"><span style="--i:3"><em>maîtres.</em></span></span>
+        </h1>
+      </div>
+      <div class="hero__media">
+        <div class="arch"><div class="arch-par" style="height:100%">
+          <img src="assets/photos/photo-02.jpg" width="1200" height="1600" fetchpriority="high"
+               alt="Un berger australien aux yeux vairons, langue pendante, sur la table de toilettage du salon">
+        </div></div>
+        <a class="stamp" href="https://www.google.com/maps/place/?q=place_id:ChIJIbjAfDjgwkcRyeJlLgNx2xc" target="_blank" rel="noopener" aria-label="Noté 4,9 sur 5 sur 45 avis Google, voir les avis">
+          <svg class="ring" viewBox="0 0 120 120" aria-hidden="true">
+            <defs><path id="circ" d="M60,60 m-47,0 a47,47 0 1,1 94,0 a47,47 0 1,1 -94,0"/></defs>
+            <text><textPath href="#circ">45 avis Google · Toutou Wash · Warchin ·</textPath></text>
+          </svg>
+          <span class="stamp__c" aria-hidden="true"><strong>4,9</strong>
+            <span class="stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span></span>
+        </a>
+      </div>
+      <div class="hero__aside">
+        <p class="hero__lede" data-reveal>Toilettage canin au Vieux Chemin d'Ath, à Warchin. Ceux qui y emmènent leur chien parlent de patience, de gentillesse, et d'un travail <strong>«&nbsp;sérieux et impeccable&nbsp;»</strong>.</p>
+        <div class="hero__ctas" data-reveal style="--d:1">
+          <a class="btn btn--brand" href="tel:+32493987603"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3.5l1.8 4.4-2.3 1.5a11 11 0 0 0 6.1 6.1l1.5-2.3L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></svg>Appeler le salon</a>
+          <a class="btn btn--ghost" href="sms:+32493987603?&amp;body=Bonjour%2C%20je%20souhaiterais%20prendre%20rendez-vous%20pour%20le%20toilettage%20de%20mon%20chien.%20Merci."><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Envoyer un SMS</a>
+        </div>
+        <a class="hero__rating link" href="https://www.google.com/maps/place/?q=place_id:ChIJIbjAfDjgwkcRyeJlLgNx2xc" target="_blank" rel="noopener" data-reveal style="--d:2">
+          <span class="stars" aria-hidden="true"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span>
+          4,9 sur 5 · 45 avis Google
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="proof" id="avis" aria-labelledby="avis-t">
+    <div class="wrap grid">
+      <div class="proof__side" data-reveal>
+        <p class="eyebrow"><b>01</b> Avis Google</p>
+        <div class="score">
+          <span class="score__n">4,9</span>
+          <span class="score__meta"><span class="stars" aria-hidden="true"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span><br>sur 5, d'après<br>45 avis</span>
+        </div>
+        <h2 id="avis-t">Le mot qui revient&nbsp;: <em>patience</em>.</h2>
+        <a class="proof__more link" href="https://www.google.com/maps/place/?q=place_id:ChIJIbjAfDjgwkcRyeJlLgNx2xc" target="_blank" rel="noopener">Voir les 45 avis sur Google <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+      </div>
+      <div class="proof__main">
+        <figure class="feature" data-reveal style="--d:1">
+          <blockquote><p>Personne adorable et patiente avec les animaux et leurs maîtres… travail sérieux et impeccable</p></blockquote>
+          <figcaption class="cite"><span class="stars" aria-label="5 étoiles sur 5"><svg aria-hidden="true"><use href="#star"/></svg><svg aria-hidden="true"><use href="#star"/></svg><svg aria-hidden="true"><use href="#star"/></svg><svg aria-hidden="true"><use href="#star"/></svg><svg aria-hidden="true"><use href="#star"/></svg></span><b>Carine T.</b> · décembre 2021</figcaption>
+        </figure>
+        <ul class="quotes" aria-label="Autres avis">
+          <li data-reveal>
+            <span class="n">5/5 · Robert F. · 2023</span>
+            <blockquote><p>«&nbsp;je recommande très Fort Toutou Wash. Pour la qualité de son travail et la patience que cette dame a envers les animaux. Un tout grand MERCI&nbsp;»</p></blockquote>
+          </li>
+          <li data-reveal style="--d:1">
+            <span class="n">5/5 · <span style="text-transform:capitalize">marie</span> P. · 2025</span>
+            <blockquote><p>«&nbsp;Une personne très agréable qui fait un excellent travail. Je suis très satisfaite du résultat, ma petite Tina est magnifique…&nbsp;»</p></blockquote>
+          </li>
+          <li data-reveal style="--d:2">
+            <span class="n">5/5 · <span style="text-transform:capitalize">tony</span> M. · 2022</span>
+            <blockquote><p>«&nbsp;Je recommande à tout le monde très gentil très sympathique fait très très bien son travail encore merci à elle&nbsp;»</p></blockquote>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GROOMING -->
+  <section class="groom" id="toilettage" aria-labelledby="groom-t">
+    <div class="wrap grid">
+      <figure class="groom__photo" data-reveal style="margin-block:0">
+        <img src="assets/photos/photo-04.jpg" width="1200" height="1600" loading="lazy" decoding="async"
+             alt="La toiletteuse, en blouse magenta, sèche au souffleur un berger australien debout sur la table">
+        <figcaption>Au séchage, Vieux Chemin d'Ath</figcaption>
+      </figure>
+      <div class="groom__panel">
+        <p class="eyebrow" data-reveal><b>02</b> Le toilettage</p>
+        <h2 id="groom-t" data-reveal>Du bac au dernier coup de ciseaux.</h2>
+        <p class="groom__intro" data-reveal>Un salon carrelé, une table réglable, un souffleur, des ciseaux. Et quelqu'un qui prend le temps avec chaque chien, du petit gabarit au berger australien.</p>
+        <ol class="steps">
+          <li data-reveal><span class="k">01</span><h3>Le bain</h3><p>Au bac du salon, pour commencer.</p></li>
+          <li data-reveal style="--d:1"><span class="k">02</span><h3>Le séchage</h3><p>Au souffleur, sur la table, sans brusquer.</p></li>
+          <li data-reveal style="--d:2"><span class="k">03</span><h3>La coupe</h3><p>Aux ciseaux, jusqu'aux finitions.</p></li>
+        </ol>
+        <p class="groom__note" data-reveal>Tarif et rendez-vous&nbsp;: un appel suffit. <a class="link" href="tel:+32493987603" style="font-weight:600;color:var(--ink)">0493 98 76 03</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRE -->
+  <section class="reg" id="registre" aria-labelledby="reg-t">
+    <div class="wrap">
+      <div class="reg__head">
+        <div>
+          <p class="eyebrow" data-reveal><b>03</b> Sur la table</p>
+          <h2 id="reg-t" data-reveal>Bilou, Judy, Biscotte, <em>et les autres.</em></h2>
+        </div>
+        <div>
+          <p class="reg__intro" data-reveal>Après la coupe, la photo, et le prénom avec. Quelques chiens passés au salon.</p>
+          <div class="rail__ctrl" style="margin-top:24px">
+            <button type="button" data-dir="-1" aria-label="Photos précédentes"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+            <button type="button" data-dir="1" aria-label="Photos suivantes"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="rail" id="rail" aria-label="Chiens toilettés au salon">
+      <li data-reveal><figure style="margin:0"><div class="crop" style="--s:2.202;--ox:51.1%;--oy:26.3%"><img src="assets/photos/photo-06.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Judy, petit chien au poil noir bouclé et collier rouge, après sa toilette"></div><figcaption class="tag"><strong>Judy</strong><span>N°&nbsp;01</span></figcaption></figure></li>
+      <li data-reveal style="--d:1"><figure style="margin:0"><div class="crop" style="--s:2.353;--ox:56.5%;--oy:45.6%"><img src="assets/photos/photo-01.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Bilou, petit chien blanc fraîchement coupé, debout sur la table"></div><figcaption class="tag"><strong>Bilou</strong><span>N°&nbsp;02</span></figcaption></figure></li>
+      <li data-reveal style="--d:2"><figure style="margin:0"><div class="crop" style="--s:1.875;--ox:44.6%;--oy:62.9%"><img src="assets/photos/photo-03.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Biscotte, couchée dans un fauteuil de cuir noir au salon"></div><figcaption class="tag"><strong>Biscotte</strong><span>N°&nbsp;03</span></figcaption></figure></li>
+      <li data-reveal style="--d:3"><figure style="margin:0"><div class="crop" style="--s:2.308;--ox:52.9%;--oy:38%"><img src="assets/photos/photo-13.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Scoobidou, petit chien crème aux oreilles dorées, sur la table de toilettage"></div><figcaption class="tag"><strong>Scoobidou</strong><span>N°&nbsp;04</span></figcaption></figure></li>
+      <li data-reveal style="--d:4"><figure style="margin:0"><div class="crop" style="--s:2.069;--ox:54.8%;--oy:73.8%"><img src="assets/photos/photo-14.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Caline, petite chienne blanche, devant le mur décoré du salon"></div><figcaption class="tag"><strong>Caline</strong><span>N°&nbsp;05</span></figcaption></figure></li>
+      <li data-reveal style="--d:5"><figure style="margin:0"><div class="crop"><img src="assets/photos/photo-05.jpg" width="900" height="1600" loading="lazy" decoding="async" style="object-position:55% 50%" alt="Un berger australien encore mouillé, séché au souffleur sur la table"></div><figcaption class="tag"><strong>Encore mouillé</strong><span>N°&nbsp;06</span></figcaption></figure></li>
+    </ul>
+  </section>
+
+  <!-- SIGNATURE BAND -->
+  <section class="band" aria-labelledby="band-t">
+    <div class="wrap">
+      <p class="eyebrow" id="band-t"><b>Au mur du salon</b></p>
+      <ol class="daisy" id="daisy" aria-label="Un peu, beaucoup, passionnément, à la folie">
+        <li>Un peu,</li>
+        <li>beaucoup,</li>
+        <li>passionnément,</li>
+        <li>à la folie.</li>
+      </ol>
+      <div class="band__foot">
+        <p>C'est écrit au mur du salon, en lettres noires, à côté des tulipes rouges et de la table de toilettage. Ses clients, eux, écrivent «&nbsp;Un tout grand MERCI&nbsp;».</p>
+        <div><a class="btn btn--light" href="tel:+32493987603">Prendre rendez-vous</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESS -->
+  <section class="access" id="acces" aria-labelledby="acces-t">
+    <div class="wrap grid">
+      <div class="access__info">
+        <p class="eyebrow" data-reveal><b>04</b> Accès</p>
+        <h2 id="acces-t" data-reveal>Vieux Chemin d'Ath, à&nbsp;Warchin.</h2>
+        <address class="addr" data-reveal>Toutou Wash<br>Vieux Chemin d'Ath 36<br>7548 Tournai</address>
+        <ul class="facts">
+          <li data-reveal><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>À Warchin, section de Tournai.</span></li>
+          <li data-reveal style="--d:1"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="4.5" r="1.8"/><path d="M10 8v6h5l2 5M10 11h5"/><path d="M7.5 11.5a5 5 0 1 0 6.8 6.4"/></svg><span>Parking accessible en fauteuil roulant.</span></li>
+          <li data-reveal style="--d:2"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span>Disponibilités au téléphone, au 0493&nbsp;98&nbsp;76&nbsp;03.</span></li>
+        </ul>
+        <div class="access__btns" data-reveal>
+          <a class="btn btn--brand" href="https://www.google.com/maps/dir/?api=1&amp;destination=Toutou%20Wash%2C%20Vieux%20Chemin%20d'Ath%2036%2C%207548%20Tournai" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>Itinéraire</a>
+          <a class="btn btn--ghost" href="https://www.google.com/maps/place/?q=place_id:ChIJIbjAfDjgwkcRyeJlLgNx2xc" target="_blank" rel="noopener">Ouvrir Google Maps</a>
+        </div>
+      </div>
+      <div class="access__map" data-reveal>
+        <div class="map">
+          <iframe src="https://www.google.com/maps?q=Toutou%20Wash%2C%20Vieux%20Chemin%20d'Ath%2036%2C%207548%20Tournai&amp;output=embed&amp;hl=fr" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Carte : Toutou Wash, Vieux Chemin d'Ath 36, Tournai"></iframe>
+          <a class="map__fallback" href="https://www.google.com/maps/place/?q=place_id:ChIJIbjAfDjgwkcRyeJlLgNx2xc" target="_blank" rel="noopener">Agrandir la carte <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact" aria-labelledby="contact-t">
+    <div class="wrap">
+      <div class="grid contact__inner">
+        <div class="contact__text">
+          <p class="eyebrow" data-reveal><b>05</b> Rendez-vous</p>
+          <h2 id="contact-t" data-reveal>Pour réserver la table, le plus simple reste un appel.</h2>
+          <a class="phone" href="tel:+32493987603" data-reveal aria-label="Appeler le 0493 98 76 03"><span>0493 98 76 03</span></a>
+          <div class="contact__btns" data-reveal>
+            <a class="btn btn--brand" href="tel:+32493987603"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3.5l1.8 4.4-2.3 1.5a11 11 0 0 0 6.1 6.1l1.5-2.3L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></svg>Appeler</a>
+            <a class="btn btn--ghost" href="sms:+32493987603?&amp;body=Bonjour%2C%20je%20souhaiterais%20prendre%20rendez-vous%20pour%20le%20toilettage%20de%20mon%20chien.%20Merci."><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Envoyer un SMS</a>
+          </div>
+          <a class="contact__social link" href="https://www.facebook.com/people/Toutouwash/100054421542592/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5h2.5V5H14a3.5 3.5 0 0 0-3.5 3.5V11H8v3.5h2.5V21H14v-6.5h2.5L17 11h-3V9a.5.5 0 0 1 .5-.5z"/></svg>Toutou Wash sur Facebook</a>
+        </div>
+        <figure class="contact__photo" data-reveal style="margin-inline:0;margin-bottom:0">
+          <div class="crop"><img src="assets/photos/photo-08.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Un petit chien au poil long sombre, couché sur un coussin en terrasse, entre des pots de fleurs"></div>
+        </figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__grid">
+      <div>
+        <span class="mark__word">Toutou <em style="color:var(--brand-light)">Wash</em></span>
+        <p style="margin-top:12px">Toiletteur canin à Warchin, Tournai.</p>
+      </div>
+      <div>
+        <p>Vieux Chemin d'Ath 36<br>7548 Tournai, Belgique</p>
+      </div>
+      <div>
+        <a class="link" href="tel:+32493987603">+32 493 98 76 03</a><br>
+        <a class="link" href="https://www.facebook.com/people/Toutouwash/100054421542592/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <div class="ftr__bottom">
+      <p>© <span id="year">2026</span> Toutou Wash</p>
+      <p><a class="link" href="#top">Retour en haut</a></p>
+    </div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Actions rapides">
+  <a href="tel:+32493987603"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3.5l1.8 4.4-2.3 1.5a11 11 0 0 0 6.1 6.1l1.5-2.3L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></svg>Appeler</a>
+  <a href="sms:+32493987603?&amp;body=Bonjour%2C%20je%20souhaiterais%20prendre%20rendez-vous%20pour%20le%20toilettage%20de%20mon%20chien.%20Merci."><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>SMS</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Toutou%20Wash%2C%20Vieux%20Chemin%20d'Ath%2036%2C%207548%20Tournai" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>Itinéraire</a>
+</nav>
+
+<script>
+(function(){
+  var d=document,root=d.documentElement,hdr=d.getElementById('hdr');
+  d.getElementById('year').textContent=new Date().getFullYear();
+
+  // Header shrink
+  var ticking=false;
+  function onScroll(){hdr.classList.toggle('is-scrolled',scrollY>24);ticking=false}
+  addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(onScroll)}},{passive:true});
+  onScroll();
+
+  // Menu
+  var btn=d.getElementById('menu-btn'),menu=d.getElementById('menu');
+  function setMenu(open){
+    btn.setAttribute('aria-expanded',open);menu.classList.toggle('is-open',open);btn.firstElementChild.textContent=open?'Fermer':'Menu';
+    d.body.classList.toggle('is-locked',open);
+    if(open){menu.querySelector('a').focus({preventScroll:true})}
+  }
+  btn.addEventListener('click',function(){setMenu(btn.getAttribute('aria-expanded')!=='true')});
+  menu.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false)});
+  d.addEventListener('keydown',function(e){if(e.key==='Escape'&&btn.getAttribute('aria-expanded')==='true'){setMenu(false);btn.focus()}});
+
+  // Reveal on scroll
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=d.querySelectorAll('[data-reveal]');
+  if('IntersectionObserver' in window&&!reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+
+  // Daisy band: light each line as it crosses the middle of the screen
+  var lines=d.querySelectorAll('#daisy li');
+  if('IntersectionObserver' in window&&!reduce){
+    var lo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('lit')})},{rootMargin:'0px 0px -35% 0px'});
+    lines.forEach(function(l){lo.observe(l)});
+  }else{lines.forEach(function(l){l.classList.add('lit')})}
+
+  // Rail buttons
+  var rail=d.getElementById('rail');
+  d.querySelectorAll('.rail__ctrl button').forEach(function(b){
+    b.addEventListener('click',function(){rail.scrollBy({left:(+b.dataset.dir)*rail.clientWidth*.6,behavior:reduce?'auto':'smooth'})});
+  });
+})();
+</script>
+<!--sf:preview--><div style="padding:18px 16px;font:13px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;text-align:center;background:#0f0f10;color:#a3a3a8">Aperçu réalisé par Aymen Jallouli pour Toutou Wash : ce site n'est pas encore le site officiel de l'établissement.</div><!--/sf:preview-->
+<!--sf:track--><script>(function(){try{var q=new URLSearchParams(location.search),r=q.get('r')||sessionStorage.getItem('sf_r');if(!r)return;sessionStorage.setItem('sf_r',r);navigator.sendBeacon("https://track.aymenjallouli.dev/t"+'?r='+encodeURIComponent(r)+'&p='+encodeURIComponent(location.pathname));}catch(e){}})();</script><!--/sf:track-->
+</body>
+</html>

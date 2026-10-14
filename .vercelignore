@@ -1,0 +1,8 @@
+qa
+business.json
+research.json
+pitch.json
+design-review.md
+*.log
+node_modules
+.git
